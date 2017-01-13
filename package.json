@@ -1,0 +1,26 @@
+{
+  "name": "dataserver",
+  "version": "0.0.1",
+  "dependencies": {
+    "async": "^2.1.2",
+    "body-parser": "",
+    "chart.js": "^2.2.2",
+    "express": "^4.13.3",
+    "fs-extra": "^1.0.0",
+    "jsdom": "^9.5.0",
+    "lodash": "",
+    "mongodb": "2.2.10",
+    "multer": "1.1.0",
+    "nchart": "^1.0.1",
+    "mongoose": "4.3.6",
+    "request": "",
+    "socket.io": "^1.5.0",
+    "socket.io-client": "^1.5.1",
+    "ssh2": ""
+  },
+  "devDependencies": {
+    "should": "~7.1.0",
+    "mocha": "~2.3.3",
+    "supertest": "~1.1.0"
+  }
+}
