@@ -1,3 +1,4 @@
-.script/
+.scripts/
+.CNV/
 node_modules/
 .idea/
