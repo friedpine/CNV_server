@@ -64,7 +64,7 @@ router.get('/data_list', function (req, res) {
 router.post('/add_path', urlencodedParser, function (req, res) {
     var info = req.body
     info.path = info.path.trim()
-    info.sample = info.sample.path.trim()
+    info.sample = info.sample.trim()
     console.log(info)
     if(parseInt(info.cutlength)){
     } else {
