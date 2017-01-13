@@ -78,8 +78,16 @@
                                                 <td>{user.sample}</td>
                                                 <td>{(new Date(user.time)).toLocaleDateString()}</td>
                                                 <td>{user.status}</td>
-                                                <td><a href={'/static/CNV'+user.result_path}>Download All Chrs Zip</a></td>
-                                                <td><a href={'/static/CNV'+user.image}>View CNV Genome Plot</a></td>
+                                                {
+                                                    user.status=="Finished" ?
+                                                            (
+                                                            <td>Download All Chrs Zip</td>
+                                                            <td>View CNV Genome Plot</td>
+                                                            ):(
+                                                        <td><a href={'/static/CNV'+user.result_path}>Download All Chrs Zip</a></td>
+                                                        <td><a href={'/static/CNV'+user.image}>View CNV Genome Plot</a></td>
+                                                    )
+                                                }
                                             </tr>
                                     )
                                 })

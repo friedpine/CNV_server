@@ -12,7 +12,7 @@ perl $scriptdir/uniq2bin.50k.pl $Outdir/$sample.bowtie2.sam $scriptdir
 echo -e "$sample\t$Outdir/CNV/$sample.bowtie2.sam.hg19.50k.k50.varbin.data.copynumber.txt" >$Outdir/CNV/temp.txt
 /mnt/gpfs/Database/bin/Rscript $scriptdir/plot.figures.R $scriptdir $Outdir/CNV/temp.txt $Outdir/CNV/$sample.genome_CNV.png
 cd $Outdir/CNV
-/mnt/gpfs/Database/bin/zip -r ./$sample.chr_pngs.zip ./*png
+/mnt/gpfs/Database/bin/zip ./$sample.chr_pngs.zip ./*png
 curl "http://192.168.2.11:3000/change_state?sample=$sample&action=status&info=Finished"
 curl "http://192.168.2.11:3000/change_state?sample=$sample&action=image&info=/$sample/CNV/$sample.genome_CNV.png"
 curl "http://192.168.2.11:3000/change_state?sample=$sample&action=result_path&info=/$sample/CNV/$sample.chr_pngs.zip"
