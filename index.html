@@ -73,24 +73,15 @@
                             <tbody>
                             {
                                 this.state.data.map((user) => {
-                                    return (
-                                            <tr>
-                                                <td>{user.sample}</td>
+                                    return (<tr>
+                                              <td>{user.sample}</td>
                                                 <td>{(new Date(user.time)).toLocaleDateString()}</td>
                                                 <td>{user.status}</td>
-                                                {
-                                                    user.status=="Finished" ?
-                                                            (
-                                                            <td>Download All Chrs Zip</td>
-                                                            <td>View CNV Genome Plot</td>
-                                                            ):(
-                                                        <td><a href={'/static/CNV'+user.result_path}>Download All Chrs Zip</a></td>
-                                                        <td><a href={'/static/CNV'+user.image}>View CNV Genome Plot</a></td>
-                                                    )
-                                                }
-                                            </tr>
+                                                <td>{user.status=="Finished"? <a href={'/static/CNV'+user.result_path}>Download All Chrs Zip</a> : "Download All Chrs Zip"}</td>
+                                                <td>{user.status=="Finished"? <a href={'/static/CNV'+user.image}>View CNV Genome Plot</a> : "View CNV Genome Plot"}</td>
+                                            </tr>)
+                                        }
                                     )
-                                })
                             }
                             </tbody>
                         </table>
