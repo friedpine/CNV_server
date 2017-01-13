@@ -37,7 +37,7 @@
         </div>
 
         <div class="container col-md-8 col-md-offset-2">
-            <h2 class="legend form-title">CNV Tasks</h2>
+            <h2 class="legend form-title">CNV Results</h2>
             <div id="example"></div>
         </div>
 
@@ -60,8 +60,8 @@
         render: function() {
             return (
                     <div>
-                        <table style={{'margin-top': "20px", 'text-align': 'center', 'font-size': "12px"}} className="table table-striped table-bordered">
-                            <thead>
+                        <table style={{'margin-top': "20px", 'text-align': 'center'}} className="table table-striped table-bordered">
+                            <thead style={{'font-size': "14px"}}>
                             <tr>
                                 <td className="col-sm-2">Sample</td>
                                 <td className="col-sm-2">Create Time</td>
@@ -70,7 +70,7 @@
                                 <td className="col-sm-4">Image</td>
                             </tr>
                             </thead>
-                            <tbody>
+                            <tbody style={{'font-size': "12px"}}>
                             {
                                 this.state.data.map((user) => {
                                     return (<tr>
